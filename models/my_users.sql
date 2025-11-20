@@ -7,4 +7,4 @@ SELECT
     signup_date,
     EXTRACT(YEAR FROM signup_date) AS signup_year
 FROM raw_users
-WHERE email IS NULL
+WHERE email IS NOT NULL
