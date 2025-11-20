@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: my_users
+    description: "Transformasi data users mentah"
+    columns:
+      - name: id
+        description: "ID user"
+      - name: email
+        description: "Email user"
+        tests:
+          - not_null
+  - name: users_per_year
+    description: "Hitung total user per tahun"
+    columns:
+      - name: signup_year
+        description: "Tahun pendaftaran"
+      - name: total_users
+        description: "Jumlah user"
